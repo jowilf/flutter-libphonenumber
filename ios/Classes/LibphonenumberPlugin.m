@@ -41,7 +41,7 @@
     }
 
     if ([@"isValidPhoneNumber" isEqualToString:call.method]) {
-        NSNumber *validNumber = [NSNumber numberWithBool:[self.phoneUtil isValidNumber:number]];
+        NSNumber *validNumber = [NSNumber numberWithBool:[self.phoneUtil isPossibleNumber:number]];
         result(validNumber);
     } else if ([@"normalizePhoneNumber" isEqualToString:call.method]) {
         NSString *normalizedNumber = [self.phoneUtil format:number

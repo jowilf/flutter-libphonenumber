@@ -74,7 +74,7 @@ public class LibphonenumberPlugin implements MethodCallHandler {
 
     try {
       Phonenumber.PhoneNumber p = phoneUtil.parse(phoneNumber, isoCode.toUpperCase());
-      result.success(phoneUtil.isValidNumber(p));
+      result.success(phoneUtil.isPossibleNumber(p));
     } catch (NumberParseException e) {
       result.error("NumberParseException", e.getMessage(), null);
     }
